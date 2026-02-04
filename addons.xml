@@ -24,7 +24,7 @@
     </addon>
     <addon id="service.subtitletranslator"
            name="Subtitle Translator"
-           version="0.8.1"
+           version="0.8.2"
            provider-name="yeager">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
@@ -43,7 +43,7 @@
                 <icon>resources/icon.png</icon>
                 <fanart>resources/fanart.png</fanart>
             </assets>
-            <news>v0.8.1 - Fixed notification when target language exists, improved logging</news>
+            <news>v0.8.2 - Full translations for all 25 languages</news>
         </extension>
     </addon>
 </addons>
