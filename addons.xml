@@ -24,7 +24,7 @@
     </addon>
     <addon id="service.subtitletranslator"
            name="Subtitle Translator"
-           version="0.7.2"
+           version="0.8.1"
            provider-name="yeager">
         <requires>
             <import addon="xbmc.python" version="3.0.0"/>
@@ -37,13 +37,13 @@
             <license>GPL-3.0-or-later</license>
             <summary lang="en_GB">Automatically translate embedded subtitles</summary>
             <summary lang="sv_SE">Översätt inbäddade undertexter automatiskt</summary>
-            <description lang="en_GB">When no subtitle is available in your preferred language, this addon extracts embedded subtitles from the media file and translates them using DeepL, LibreTranslate, Google Translate, or other translation services.</description>
-            <description lang="sv_SE">När ingen undertext finns tillgänglig på ditt föredragna språk extraherar detta tillägg inbäddade undertexter från mediafilen och översätter dem med DeepL, LibreTranslate, Google Translate eller andra översättningstjänster.</description>
+            <description lang="en_GB">When no subtitle is available in your preferred language, this addon extracts embedded subtitles from the media file and translates them using DeepL, LibreTranslate, Google Translate, or other translation services. Now also supports external subtitle files!</description>
+            <description lang="sv_SE">När ingen undertext finns tillgänglig på ditt föredragna språk extraherar detta tillägg inbäddade undertexter från mediafilen och översätter dem med DeepL, LibreTranslate, Google Translate eller andra översättningstjänster. Stödjer nu även externa undertextfiler!</description>
             <assets>
                 <icon>resources/icon.png</icon>
                 <fanart>resources/fanart.png</fanart>
             </assets>
-            <news>v0.7.2 - Fixed SMB/NFS path handling, clarified DeepL labels</news>
+            <news>v0.8.1 - Fixed notification when target language exists, improved logging</news>
         </extension>
     </addon>
 </addons>
