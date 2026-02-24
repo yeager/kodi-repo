@@ -2,24 +2,30 @@
 <addons>
 <addon id="repository.yeager"
        name="Yeager Repository"
-       version="1.0.0"
+       version="1.0.1"
        provider-name="yeager">
     <requires>
         <import addon="xbmc.addon" version="12.0.0"/>
     </requires>
     <extension point="xbmc.addon.repository" name="Yeager Repository">
-        <dir>
-            <info compressed="false">https://yeager.github.io/kodi-repo/addons.xml</info>
-            <checksum>https://yeager.github.io/kodi-repo/addons.xml.md5</checksum>
-            <datadir zip="true">https://yeager.github.io/kodi-repo/</datadir>
+        <dir minversion="19.0.0">
+            <info compressed="false">https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/yeager/kodi-repo/main/</datadir>
+            <hashes>md5</hashes>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <platform>all</platform>
+        <license>GPL-3.0-or-later</license>
         <summary lang="en_GB">Yeager's Kodi Add-on Repository</summary>
         <summary lang="sv_SE">Yeagers Kodi-tilläggsförråd</summary>
         <description lang="en_GB">Install and update add-ons from Yeager's repository, including Subtitle Translator.</description>
         <description lang="sv_SE">Installera och uppdatera tillägg från Yeagers förråd, inklusive Subtitle Translator.</description>
+        <news>1.0.1 - Switch to raw.githubusercontent.com for reliable updates</news>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
     </extension>
 </addon>
 <addon id="service.subtitletranslator"
@@ -30,6 +36,7 @@
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.22.0"/>
         <!-- FFmpeg är optional - addon hittar system-FFmpeg om tillägget saknas -->
+
     </requires>
     <extension point="xbmc.service" library="service.py" start="startup"/>
     <extension point="xbmc.addon.metadata">
@@ -395,12 +402,6 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
             <fanart>resources/fanart.png</fanart>
         </assets>
         <news>
-v0.9.6
-- Android/Termux FFmpeg detection: added Termux nightly paths, /data/user/0/ variants, PATH scanning
-- Debug logging for all FFmpeg search paths
-- Installation instructions now include detailed Termux/Shield steps
-- 5 new translatable strings (30868-30872)
-
 v0.9.5
 - Added GitHub Actions CI for Transifex sync and release builds
 - Updated README with release badges and download links
