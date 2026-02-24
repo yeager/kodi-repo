@@ -15,7 +15,7 @@ Custom Kodi add-on repository with automatic updates.
 
 ## Available Add-ons
 
-### Subtitle Translator (v0.9.6)
+### Subtitle Translator (v0.9.8)
 
 Automatically translate embedded and external subtitles to your preferred language.
 
@@ -27,11 +27,11 @@ Automatically translate embedded and external subtitles to your preferred langua
 - **Translation profiles** — Anime, Kids, Documentary, etc.
 - **25 UI languages** — fully translated via Transifex
 
-**Latest changes (v0.9.6):**
-- Android/Termux FFmpeg detection improved (nightly paths, PATH scanning)
-- Auto-download FFmpeg on Android (one-click in dialog)
-- All user-visible strings now translatable via Transifex
-- Detailed installation instructions for Android/Shield
+**Latest changes (v0.9.8):**
+- **Fix critical crash** — NameError in progress dialog that prevented all translations from completing
+- Auto-download FFmpeg on Android (one-click, no Termux needed)
+- All user-visible strings translatable via Transifex
+- Improved Android/Termux FFmpeg detection
 
 [Source code](https://github.com/yeager/kodi-subtitle-translator) · [Releases](https://github.com/yeager/kodi-subtitle-translator/releases)
 

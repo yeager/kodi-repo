@@ -1,36 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="repository.yeager"
-       name="Yeager Repository"
-       version="1.0.1"
-       provider-name="yeager">
-    <requires>
-        <import addon="xbmc.addon" version="12.0.0"/>
-    </requires>
-    <extension point="xbmc.addon.repository" name="Yeager Repository">
-        <dir minversion="19.0.0">
-            <info compressed="false">https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/yeager/kodi-repo/main/</datadir>
-            <hashes>md5</hashes>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <license>GPL-3.0-or-later</license>
-        <summary lang="en_GB">Yeager's Kodi Add-on Repository</summary>
-        <summary lang="sv_SE">Yeagers Kodi-tilläggsförråd</summary>
-        <description lang="en_GB">Install and update add-ons from Yeager's repository, including Subtitle Translator.</description>
-        <description lang="sv_SE">Installera och uppdatera tillägg från Yeagers förråd, inklusive Subtitle Translator.</description>
-        <news>1.0.1 - Switch to raw.githubusercontent.com for reliable updates</news>
-        <assets>
-            <icon>resources/icon.png</icon>
-        </assets>
-    </extension>
-</addon>
 <addon id="service.subtitletranslator"
        name="Subtitle Translator"
-       version="0.9.7"
+       version="0.9.8"
        provider-name="yeager">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -463,6 +435,35 @@ v0.7.0 - Initial beta
 - Offline translation with Argos Translate
 - Basic, Standard, Advanced, and Expert settings levels
         </news>
+    </extension>
+</addon>
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.yeager"
+       name="Yeager Repository"
+       version="1.0.1"
+       provider-name="yeager">
+    <requires>
+        <import addon="xbmc.addon" version="12.0.0"/>
+    </requires>
+    <extension point="xbmc.addon.repository" name="Yeager Repository">
+        <dir minversion="19.0.0">
+            <info compressed="false">https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/yeager/kodi-repo/main/</datadir>
+            <hashes>md5</hashes>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <license>GPL-3.0-or-later</license>
+        <summary lang="en_GB">Yeager's Kodi Add-on Repository</summary>
+        <summary lang="sv_SE">Yeagers Kodi-tilläggsförråd</summary>
+        <description lang="en_GB">Install and update add-ons from Yeager's repository, including Subtitle Translator.</description>
+        <description lang="sv_SE">Installera och uppdatera tillägg från Yeagers förråd, inklusive Subtitle Translator.</description>
+        <news>1.0.1 - Switch to raw.githubusercontent.com for reliable updates</news>
+        <assets>
+            <icon>resources/icon.png</icon>
+        </assets>
     </extension>
 </addon>
 </addons>
