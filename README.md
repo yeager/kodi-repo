@@ -12,22 +12,31 @@ Custom Kodi add-on repository.
 
 ## Available Add-ons
 
-### Subtitle Translator
+### Subtitle Translator (v0.9.5)
 Automatically translate embedded subtitles to your preferred language.
 
-- 10 translation services (Lingva, MyMemory, DeepL, Google, OpenAI, etc.)
-- Extracts subtitles from MKV/MP4 using FFmpeg
-- Caches translations for faster playback
-- Auto-selects newly translated subtitles
+- **10 translation services** — Lingva, MyMemory, DeepL (Pro & Free), Google Translate, Microsoft, OpenAI, Anthropic, LibreTranslate, and more
+- **FFmpeg subtitle extraction** — MKV, MP4, AVI and other containers
+- **Smart caching** — translations cached for faster repeat playback
+- **Auto-selection** — newly translated subtitles selected automatically
+- **Auto-fallback** — falls back to Lingva if API keys are missing
+- **FFmpeg helper** — guided installation dialog when FFmpeg not found
+- **25 languages** — UI translated via Transifex
 
-[Source code](https://github.com/yeager/kodi-subtitle-translator)
+**Latest changes (v0.9.5):**
+- GitHub Actions CI (Transifex sync + automated builds)
+- DeepL Free API key bugfix
+- FFmpeg not found dialog with platform-specific instructions
+- Auto-fallback to Lingva when API keys missing
+
+[Source code](https://github.com/yeager/kodi-subtitle-translator) · [Releases](https://github.com/yeager/kodi-subtitle-translator/releases)
 
 ## For Developers
 
 Repository URL: `https://yeager.github.io/kodi-repo/`
 
 Files:
-- `addons.xml` - Add-on metadata
-- `addons.xml.md5` - Checksum
-- `repository.yeager/` - Repository installer
-- `service.subtitletranslator/` - Subtitle Translator add-on
+- `addons.xml` — Add-on metadata
+- `addons.xml.md5` — Checksum
+- `repository.yeager/` — Repository installer
+- `service.subtitletranslator/` — Subtitle Translator add-on
