@@ -2,7 +2,7 @@
 <addons>
 <addon id="service.subtitletranslator"
        name="Subtitle Translator"
-       version="0.9.14"
+       version="0.9.15"
        provider-name="yeager">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
