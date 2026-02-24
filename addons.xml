@@ -24,7 +24,7 @@
 </addon>
 <addon id="service.subtitletranslator"
        name="Subtitle Translator"
-       version="0.9.5"
+       version="0.9.6"
        provider-name="yeager">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
@@ -396,6 +396,12 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
             <fanart>resources/fanart.png</fanart>
         </assets>
         <news>
+v0.9.6
+- Android/Termux FFmpeg detection: added Termux nightly paths, /data/user/0/ variants, PATH scanning
+- Debug logging for all FFmpeg search paths
+- Installation instructions now include detailed Termux/Shield steps
+- 5 new translatable strings (30868-30872)
+
 v0.9.5
 - Added GitHub Actions CI for Transifex sync and release builds
 - Updated README with release badges and download links
