@@ -19,19 +19,21 @@ Custom Kodi add-on repository with automatic updates.
 
 Automatically translate embedded and external subtitles to your preferred language.
 
-- **10 translation services** — Lingva (default, free), DeepL, Google Translate, Microsoft, OpenAI, Anthropic, LibreTranslate, Argos (offline), MyMemory, Yandex
-- **Embedded & external subtitles** — FFmpeg extraction for MKV/MP4/AVI + .srt/.ass/.ssa/.sub/.vtt
-- **Android/Shield support** — automatic FFmpeg download, no manual steps needed
+- **Built-in MKV parser** — extracts subtitles directly from MKV files without FFmpeg, streams over SMB/NFS
+- **10 translation services** — Lingva (default, free), DeepL, Google, Microsoft, OpenAI, Anthropic, LibreTranslate, Argos (offline), MyMemory, Yandex
+- **FFmpeg optional** — only needed as fallback for non-MKV containers (MP4, AVI)
+- **Android/Shield** — works out of the box, no FFmpeg or Termux needed for MKV files
 - **Smart caching** — translations cached for faster repeat playback
 - **Auto-fallback** — falls back to Lingva if API keys are missing
-- **Translation profiles** — Anime, Kids, Documentary, etc.
 - **25 UI languages** — fully translated via Transifex
 
 **Latest changes (v0.9.17):**
-- **Fix critical crash** — NameError in progress dialog that prevented all translations from completing
-- Auto-download FFmpeg on Android (one-click, no Termux needed)
-- All user-visible strings translatable via Transifex
-- Improved Android/Termux FFmpeg detection
+- Pure Python MKV subtitle extractor — no FFmpeg needed, streams over SMB/NFS
+- Fixed OOM crash on Android (streaming parser, never loads full file)
+- Fixed Lingva rate limiting (1.2s delay between requests)
+- Fixed NameError crash in progress dialog
+- Fixed language matching (sv/sv_se/swe all match correctly)
+- Better error logging for translation troubleshooting
 
 [Source code](https://github.com/yeager/kodi-subtitle-translator) · [Releases](https://github.com/yeager/kodi-subtitle-translator/releases)
 
