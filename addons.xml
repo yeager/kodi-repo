@@ -1,49 +1,65 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="service.subtitletranslator"
-       name="Subtitle Translator"
-       version="0.9.17"
-       provider-name="yeager">
+  <addon id="repository.yeager" name="Yeager Repository" version="1.0.1" provider-name="yeager">
     <requires>
-        <import addon="xbmc.python" version="3.0.0"/>
-        <import addon="script.module.requests" version="2.22.0"/>
-        <!-- FFmpeg är optional - addon hittar system-FFmpeg om tillägget saknas -->
-
+      <import addon="xbmc.addon" version="12.0.0" />
     </requires>
-    <extension point="xbmc.service" library="service.py" start="startup"/>
+    <extension point="xbmc.addon.repository" name="Yeager Repository">
+      <dir minversion="19.0.0">
+        <info compressed="false">https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/yeager/kodi-repo/main/</datadir>
+        <hashes>md5</hashes>
+      </dir>
+    </extension>
     <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <license>GPL-3.0-or-later</license>
-        
-        <!-- Summary (short description) - 25 languages -->
-        <summary lang="en_GB">Automatically translate embedded subtitles</summary>
-        <summary lang="sv_SE">Översätt inbäddade undertexter automatiskt</summary>
-        <summary lang="de_DE">Eingebettete Untertitel automatisch übersetzen</summary>
-        <summary lang="fr_FR">Traduire automatiquement les sous-titres intégrés</summary>
-        <summary lang="es_ES">Traducir automáticamente subtítulos incrustados</summary>
-        <summary lang="it_IT">Traduci automaticamente i sottotitoli incorporati</summary>
-        <summary lang="nl_NL">Automatisch ingebedde ondertitels vertalen</summary>
-        <summary lang="pl_PL">Automatycznie tłumacz osadzone napisy</summary>
-        <summary lang="pt_PT">Traduzir automaticamente legendas incorporadas</summary>
-        <summary lang="ru_RU">Автоматический перевод встроенных субтитров</summary>
-        <summary lang="uk_UA">Автоматичний переклад вбудованих субтитрів</summary>
-        <summary lang="da_DK">Oversæt automatisk indlejrede undertekster</summary>
-        <summary lang="no_NO">Oversett automatisk innebygde undertekster</summary>
-        <summary lang="fi_FI">Käännä upotetut tekstitykset automaattisesti</summary>
-        <summary lang="el_GR">Αυτόματη μετάφραση ενσωματωμένων υποτίτλων</summary>
-        <summary lang="cs_CZ">Automaticky překládat vložené titulky</summary>
-        <summary lang="hu_HU">Beágyazott feliratok automatikus fordítása</summary>
-        <summary lang="ro_RO">Traduceți automat subtitrările încorporate</summary>
-        <summary lang="tr_TR">Gömülü altyazıları otomatik olarak çevir</summary>
-        <summary lang="ar_SA">ترجمة الترجمات المضمنة تلقائيًا</summary>
-        <summary lang="he_IL">תרגום אוטומטי של כתוביות מוטמעות</summary>
-        <summary lang="ja_JP">埋め込み字幕を自動翻訳</summary>
-        <summary lang="ko_KR">내장 자막 자동 번역</summary>
-        <summary lang="zh_CN">自动翻译内嵌字幕</summary>
-        <summary lang="zh_TW">自動翻譯內嵌字幕</summary>
-        
-        <!-- Description (full) - 25 languages -->
-        <description lang="en_GB">
+      <platform>all</platform>
+      <license>GPL-3.0-or-later</license>
+      <summary lang="en_GB">Yeager's Kodi Add-on Repository</summary>
+      <summary lang="sv_SE">Yeagers Kodi-tilläggsförråd</summary>
+      <description lang="en_GB">Install and update add-ons from Yeager's repository, including Subtitle Translator.</description>
+      <description lang="sv_SE">Installera och uppdatera tillägg från Yeagers förråd, inklusive Subtitle Translator.</description>
+      <news>1.0.1 - Switch to raw.githubusercontent.com for reliable updates</news>
+      <assets>
+        <icon>resources/icon.png</icon>
+      </assets>
+    </extension>
+  </addon>
+  <addon id="service.subtitletranslator" name="Subtitle Translator" version="0.9.18" provider-name="yeager">
+    <requires>
+      <import addon="xbmc.python" version="3.0.0" />
+      <import addon="script.module.requests" version="2.22.0" />
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="startup" />
+    <extension point="xbmc.addon.metadata">
+      <platform>all</platform>
+      <license>GPL-3.0-or-later</license>
+      <summary lang="en_GB">Automatically translate embedded subtitles</summary>
+      <summary lang="sv_SE">Översätt inbäddade undertexter automatiskt</summary>
+      <summary lang="de_DE">Eingebettete Untertitel automatisch übersetzen</summary>
+      <summary lang="fr_FR">Traduire automatiquement les sous-titres intégrés</summary>
+      <summary lang="es_ES">Traducir automáticamente subtítulos incrustados</summary>
+      <summary lang="it_IT">Traduci automaticamente i sottotitoli incorporati</summary>
+      <summary lang="nl_NL">Automatisch ingebedde ondertitels vertalen</summary>
+      <summary lang="pl_PL">Automatycznie tłumacz osadzone napisy</summary>
+      <summary lang="pt_PT">Traduzir automaticamente legendas incorporadas</summary>
+      <summary lang="ru_RU">Автоматический перевод встроенных субтитров</summary>
+      <summary lang="uk_UA">Автоматичний переклад вбудованих субтитрів</summary>
+      <summary lang="da_DK">Oversæt automatisk indlejrede undertekster</summary>
+      <summary lang="no_NO">Oversett automatisk innebygde undertekster</summary>
+      <summary lang="fi_FI">Käännä upotetut tekstitykset automaattisesti</summary>
+      <summary lang="el_GR">Αυτόματη μετάφραση ενσωματωμένων υποτίτλων</summary>
+      <summary lang="cs_CZ">Automaticky překládat vložené titulky</summary>
+      <summary lang="hu_HU">Beágyazott feliratok automatikus fordítása</summary>
+      <summary lang="ro_RO">Traduceți automat subtitrările încorporate</summary>
+      <summary lang="tr_TR">Gömülü altyazıları otomatik olarak çevir</summary>
+      <summary lang="ar_SA">ترجمة الترجمات المضمنة تلقائيًا</summary>
+      <summary lang="he_IL">תרגום אוטומטי של כתוביות מוטמעות</summary>
+      <summary lang="ja_JP">埋め込み字幕を自動翻訳</summary>
+      <summary lang="ko_KR">내장 자막 자동 번역</summary>
+      <summary lang="zh_CN">自动翻译内嵌字幕</summary>
+      <summary lang="zh_TW">自動翻譯內嵌字幕</summary>
+      <description lang="en_GB">
 When no subtitle is available in your preferred language, this addon extracts embedded subtitles from the media file and translates them using DeepL, LibreTranslate, Google Translate, or other translation services.
 
 Features:
@@ -56,7 +72,7 @@ Features:
 - Translation profiles (Anime, Kids, Documentary, etc.)
 - Offline translation with Argos Translate
         </description>
-        <description lang="sv_SE">
+      <description lang="sv_SE">
 När ingen undertext finns tillgänglig på ditt föredragna språk extraherar detta tillägg inbäddade undertexter från mediafilen och översätter dem med DeepL, LibreTranslate, Google Translate eller andra översättningstjänster.
 
 Funktioner:
@@ -69,7 +85,7 @@ Funktioner:
 - Översättningsprofiler (Anime, Barn, Dokumentär, etc.)
 - Offline-översättning med Argos Translate
         </description>
-        <description lang="de_DE">
+      <description lang="de_DE">
 Wenn keine Untertitel in Ihrer bevorzugten Sprache verfügbar sind, extrahiert dieses Addon eingebettete Untertitel aus der Mediendatei und übersetzt sie mit DeepL, LibreTranslate, Google Translate oder anderen Übersetzungsdiensten.
 
 Funktionen:
@@ -82,7 +98,7 @@ Funktionen:
 - Übersetzungsprofile (Anime, Kinder, Dokumentation, etc.)
 - Offline-Übersetzung mit Argos Translate
         </description>
-        <description lang="fr_FR">
+      <description lang="fr_FR">
 Lorsqu'aucun sous-titre n'est disponible dans votre langue préférée, cette extension extrait les sous-titres intégrés du fichier multimédia et les traduit à l'aide de DeepL, LibreTranslate, Google Translate ou d'autres services de traduction.
 
 Fonctionnalités:
@@ -95,7 +111,7 @@ Fonctionnalités:
 - Profils de traduction (Anime, Enfants, Documentaire, etc.)
 - Traduction hors ligne avec Argos Translate
         </description>
-        <description lang="es_ES">
+      <description lang="es_ES">
 Cuando no hay subtítulos disponibles en tu idioma preferido, este complemento extrae los subtítulos incrustados del archivo multimedia y los traduce usando DeepL, LibreTranslate, Google Translate u otros servicios de traducción.
 
 Características:
@@ -108,7 +124,7 @@ Características:
 - Perfiles de traducción (Anime, Niños, Documental, etc.)
 - Traducción sin conexión con Argos Translate
         </description>
-        <description lang="it_IT">
+      <description lang="it_IT">
 Quando non sono disponibili sottotitoli nella lingua preferita, questo addon estrae i sottotitoli incorporati dal file multimediale e li traduce utilizzando DeepL, LibreTranslate, Google Translate o altri servizi di traduzione.
 
 Caratteristiche:
@@ -121,7 +137,7 @@ Caratteristiche:
 - Profili di traduzione (Anime, Bambini, Documentario, ecc.)
 - Traduzione offline con Argos Translate
         </description>
-        <description lang="nl_NL">
+      <description lang="nl_NL">
 Wanneer er geen ondertiteling beschikbaar is in uw voorkeurstaal, haalt deze addon ingebedde ondertitels uit het mediabestand en vertaalt deze met DeepL, LibreTranslate, Google Translate of andere vertaaldiensten.
 
 Functies:
@@ -134,7 +150,7 @@ Functies:
 - Vertaalprofielen (Anime, Kinderen, Documentaire, etc.)
 - Offline vertaling met Argos Translate
         </description>
-        <description lang="pl_PL">
+      <description lang="pl_PL">
 Gdy napisy w preferowanym języku nie są dostępne, ten dodatek wyodrębnia osadzone napisy z pliku multimedialnego i tłumaczy je za pomocą DeepL, LibreTranslate, Google Translate lub innych usług tłumaczeniowych.
 
 Funkcje:
@@ -147,7 +163,7 @@ Funkcje:
 - Profile tłumaczeń (Anime, Dzieci, Dokument, itp.)
 - Tłumaczenie offline z Argos Translate
         </description>
-        <description lang="pt_PT">
+      <description lang="pt_PT">
 Quando não há legendas disponíveis no seu idioma preferido, este addon extrai legendas incorporadas do arquivo de mídia e as traduz usando DeepL, LibreTranslate, Google Translate ou outros serviços de tradução.
 
 Recursos:
@@ -160,7 +176,7 @@ Recursos:
 - Perfis de tradução (Anime, Crianças, Documentário, etc.)
 - Tradução offline com Argos Translate
         </description>
-        <description lang="ru_RU">
+      <description lang="ru_RU">
 Когда субтитры на предпочитаемом языке недоступны, это дополнение извлекает встроенные субтитры из медиафайла и переводит их с помощью DeepL, LibreTranslate, Google Translate или других сервисов перевода.
 
 Возможности:
@@ -173,7 +189,7 @@ Recursos:
 - Профили перевода (Аниме, Детские, Документальные и т.д.)
 - Офлайн-перевод с Argos Translate
         </description>
-        <description lang="uk_UA">
+      <description lang="uk_UA">
 Коли субтитри бажаною мовою недоступні, цей додаток витягує вбудовані субтитри з медіафайлу та перекладає їх за допомогою DeepL, LibreTranslate, Google Translate або інших сервісів перекладу.
 
 Можливості:
@@ -186,7 +202,7 @@ Recursos:
 - Профілі перекладу (Аніме, Дитячі, Документальні тощо)
 - Офлайн-переклад з Argos Translate
         </description>
-        <description lang="da_DK">
+      <description lang="da_DK">
 Når der ikke er undertekster tilgængelige på dit foretrukne sprog, udtrækker denne addon indlejrede undertekster fra mediefilen og oversætter dem ved hjælp af DeepL, LibreTranslate, Google Translate eller andre oversættelsestjenester.
 
 Funktioner:
@@ -199,7 +215,7 @@ Funktioner:
 - Oversættelsesprofiler (Anime, Børn, Dokumentar, osv.)
 - Offline oversættelse med Argos Translate
         </description>
-        <description lang="no_NO">
+      <description lang="no_NO">
 Når det ikke er undertekster tilgjengelig på ditt foretrukne språk, trekker denne addon ut innebygde undertekster fra mediefilen og oversetter dem ved hjelp av DeepL, LibreTranslate, Google Translate eller andre oversettelsestjenester.
 
 Funksjoner:
@@ -212,7 +228,7 @@ Funksjoner:
 - Oversettelsesprofiler (Anime, Barn, Dokumentar, osv.)
 - Offline oversettelse med Argos Translate
         </description>
-        <description lang="fi_FI">
+      <description lang="fi_FI">
 Kun tekstityksiä ei ole saatavilla haluamallasi kielellä, tämä lisäosa poimii upotetut tekstitykset mediatiedostosta ja kääntää ne DeepL:n, LibreTranslaten, Google Translaten tai muiden käännöspalveluiden avulla.
 
 Ominaisuudet:
@@ -225,7 +241,7 @@ Ominaisuudet:
 - Käännösprofiilit (Anime, Lapset, Dokumentti, jne.)
 - Offline-käännös Argos Translatella
         </description>
-        <description lang="el_GR">
+      <description lang="el_GR">
 Όταν δεν υπάρχουν διαθέσιμοι υπότιτλοι στην προτιμώμενη γλώσσα σας, αυτό το πρόσθετο εξάγει τους ενσωματωμένους υπότιτλους από το αρχείο πολυμέσων και τους μεταφράζει χρησιμοποιώντας DeepL, LibreTranslate, Google Translate ή άλλες υπηρεσίες μετάφρασης.
 
 Χαρακτηριστικά:
@@ -238,7 +254,7 @@ Ominaisuudet:
 - Προφίλ μετάφρασης (Anime, Παιδικά, Ντοκιμαντέρ, κλπ.)
 - Μετάφραση εκτός σύνδεσης με Argos Translate
         </description>
-        <description lang="cs_CZ">
+      <description lang="cs_CZ">
 Pokud nejsou k dispozici titulky ve vašem preferovaném jazyce, tento doplněk extrahuje vložené titulky z mediálního souboru a přeloží je pomocí DeepL, LibreTranslate, Google Translate nebo jiných překladových služeb.
 
 Funkce:
@@ -251,7 +267,7 @@ Funkce:
 - Překladové profily (Anime, Děti, Dokumenty atd.)
 - Offline překlad s Argos Translate
         </description>
-        <description lang="hu_HU">
+      <description lang="hu_HU">
 Ha a kívánt nyelven nem áll rendelkezésre felirat, ez a kiegészítő kivonja a beágyazott feliratokat a médiafájlból, és lefordítja őket a DeepL, LibreTranslate, Google Translate vagy más fordítási szolgáltatások segítségével.
 
 Funkciók:
@@ -264,7 +280,7 @@ Funkciók:
 - Fordítási profilok (Anime, Gyerek, Dokumentum stb.)
 - Offline fordítás Argos Translate-tel
         </description>
-        <description lang="ro_RO">
+      <description lang="ro_RO">
 Când nu sunt disponibile subtitrări în limba preferată, acest addon extrage subtitrările încorporate din fișierul media și le traduce folosind DeepL, LibreTranslate, Google Translate sau alte servicii de traducere.
 
 Caracteristici:
@@ -277,7 +293,7 @@ Caracteristici:
 - Profiluri de traducere (Anime, Copii, Documentar, etc.)
 - Traducere offline cu Argos Translate
         </description>
-        <description lang="tr_TR">
+      <description lang="tr_TR">
 Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyasından gömülü altyazıları çıkarır ve DeepL, LibreTranslate, Google Translate veya diğer çeviri hizmetlerini kullanarak çevirir.
 
 Özellikler:
@@ -290,7 +306,7 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - Çeviri profilleri (Anime, Çocuk, Belgesel, vb.)
 - Argos Translate ile çevrimdışı çeviri
         </description>
-        <description lang="ar_SA">
+      <description lang="ar_SA">
 عندما لا تتوفر ترجمات بلغتك المفضلة، يقوم هذا الإضافة باستخراج الترجمات المضمنة من ملف الوسائط وترجمتها باستخدام DeepL أو LibreTranslate أو Google Translate أو خدمات الترجمة الأخرى.
 
 الميزات:
@@ -303,7 +319,7 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - ملفات تعريف الترجمة (أنيمي، أطفال، وثائقي، إلخ)
 - ترجمة بدون اتصال مع Argos Translate
         </description>
-        <description lang="he_IL">
+      <description lang="he_IL">
 כאשר אין כתוביות זמינות בשפה המועדפת עליך, תוסף זה מחלץ כתוביות מוטמעות מקובץ המדיה ומתרגם אותן באמצעות DeepL, LibreTranslate, Google Translate או שירותי תרגום אחרים.
 
 תכונות:
@@ -316,7 +332,7 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - פרופילי תרגום (אנימה, ילדים, תיעודי וכו')
 - תרגום לא מקוון עם Argos Translate
         </description>
-        <description lang="ja_JP">
+      <description lang="ja_JP">
 お好みの言語で字幕が利用できない場合、このアドオンはメディアファイルから埋め込み字幕を抽出し、DeepL、LibreTranslate、Google Translate、またはその他の翻訳サービスを使用して翻訳します。
 
 機能:
@@ -329,7 +345,7 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - 翻訳プロファイル（アニメ、子供向け、ドキュメンタリーなど）
 - Argos Translateによるオフライン翻訳
         </description>
-        <description lang="ko_KR">
+      <description lang="ko_KR">
 선호하는 언어로 자막을 사용할 수 없는 경우, 이 애드온은 미디어 파일에서 내장 자막을 추출하고 DeepL, LibreTranslate, Google Translate 또는 기타 번역 서비스를 사용하여 번역합니다.
 
 기능:
@@ -342,7 +358,7 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - 번역 프로필(애니메이션, 어린이, 다큐멘터리 등)
 - Argos Translate를 통한 오프라인 번역
         </description>
-        <description lang="zh_CN">
+      <description lang="zh_CN">
 当您首选的语言没有字幕时，此插件会从媒体文件中提取嵌入字幕，并使用DeepL、LibreTranslate、Google Translate或其他翻译服务进行翻译。
 
 功能：
@@ -355,7 +371,7 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - 翻译配置文件（动漫、儿童、纪录片等）
 - 使用Argos Translate进行离线翻译
         </description>
-        <description lang="zh_TW">
+      <description lang="zh_TW">
 當您偏好的語言沒有字幕時，此插件會從媒體檔案中提取嵌入字幕，並使用DeepL、LibreTranslate、Google Translate或其他翻譯服務進行翻譯。
 
 功能：
@@ -368,12 +384,11 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
 - 翻譯設定檔（動畫、兒童、紀錄片等）
 - 使用Argos Translate進行離線翻譯
         </description>
-        
-        <assets>
-            <icon>resources/icon.png</icon>
-            <fanart>resources/fanart.png</fanart>
-        </assets>
-        <news>
+      <assets>
+        <icon>resources/icon.png</icon>
+        <fanart>resources/fanart.png</fanart>
+      </assets>
+      <news>
 v0.9.5
 - Added GitHub Actions CI for Transifex sync and release builds
 - Updated README with release badges and download links
@@ -436,34 +451,5 @@ v0.7.0 - Initial beta
 - Basic, Standard, Advanced, and Expert settings levels
         </news>
     </extension>
-</addon>
-<?xml version="1.0" encoding="UTF-8"?>
-<addon id="repository.yeager"
-       name="Yeager Repository"
-       version="1.0.1"
-       provider-name="yeager">
-    <requires>
-        <import addon="xbmc.addon" version="12.0.0"/>
-    </requires>
-    <extension point="xbmc.addon.repository" name="Yeager Repository">
-        <dir minversion="19.0.0">
-            <info compressed="false">https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml</info>
-            <checksum>https://raw.githubusercontent.com/yeager/kodi-repo/main/addons.xml.md5</checksum>
-            <datadir zip="true">https://raw.githubusercontent.com/yeager/kodi-repo/main/</datadir>
-            <hashes>md5</hashes>
-        </dir>
-    </extension>
-    <extension point="xbmc.addon.metadata">
-        <platform>all</platform>
-        <license>GPL-3.0-or-later</license>
-        <summary lang="en_GB">Yeager's Kodi Add-on Repository</summary>
-        <summary lang="sv_SE">Yeagers Kodi-tilläggsförråd</summary>
-        <description lang="en_GB">Install and update add-ons from Yeager's repository, including Subtitle Translator.</description>
-        <description lang="sv_SE">Installera och uppdatera tillägg från Yeagers förråd, inklusive Subtitle Translator.</description>
-        <news>1.0.1 - Switch to raw.githubusercontent.com for reliable updates</news>
-        <assets>
-            <icon>resources/icon.png</icon>
-        </assets>
-    </extension>
-</addon>
+  </addon>
 </addons>
