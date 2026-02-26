@@ -25,7 +25,7 @@
       </assets>
     </extension>
   </addon>
-  <addon id="service.subtitletranslator" name="Subtitle Translator" version="0.9.18" provider-name="yeager">
+  <addon id="service.subtitletranslator" name="Subtitle Translator" version="0.9.22" provider-name="yeager">
     <requires>
       <import addon="xbmc.python" version="3.0.0" />
       <import addon="script.module.requests" version="2.22.0" />
@@ -389,6 +389,12 @@ Tercih ettiğiniz dilde altyazı mevcut olmadığında, bu eklenti medya dosyas�
         <fanart>resources/fanart.png</fanart>
       </assets>
       <news>
+v0.9.22
+- Broadcast subtitle standards: max 42 chars/line, max 2 lines
+- Disclaimer subtitle (first 7s) shows version and service
+- Intelligent word-boundary wrapping on all translated text
+- Fixed addon zip version numbering
+
 v0.9.18
 - Progress dialog now shows translation service name (e.g. LibreTranslate, DeepL)
 - Init message changed from "Initialiserar..." to "Förbereder undertextextraktion..."
