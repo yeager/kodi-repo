@@ -4,7 +4,7 @@ Custom Kodi add-on repository with automatic updates.
 
 ## Installation
 
-1. Download [repository.yeager-1.0.1.zip](https://yeager.github.io/kodi-repo/repository.yeager-1.0.1.zip)
+1. Download [repository.yeager-1.0.2.zip](https://yeager.github.io/kodi-repo/repository.yeager-1.0.2.zip)
 2. In Kodi: **Add-ons → Install from zip file** → select the downloaded zip
 3. Go to **Add-ons → Install from repository → Yeager Repository**
 4. Browse and install add-ons!
@@ -15,19 +15,19 @@ Custom Kodi add-on repository with automatic updates.
 
 ## Available Add-ons
 
-### Subtitle Translator (v0.9.17)
+### Subtitle Translator (v0.11.3)
 
 Automatically translate embedded and external subtitles to your preferred language.
 
 - **Built-in MKV parser** — extracts subtitles directly from MKV files without FFmpeg, streams over SMB/NFS
-- **10 translation services** — Lingva (default, free), DeepL, Google, Microsoft, OpenAI, Anthropic, LibreTranslate, Argos (offline), MyMemory, Yandex
+- **9 translation services** — Lingva (default, free), DeepL, Google, Microsoft, OpenAI, Anthropic, LibreTranslate, Argos (offline), MyMemory (DeepL has Pro and Free configurations)
 - **FFmpeg optional** — only needed as fallback for non-MKV containers (MP4, AVI)
 - **Android/Shield** — works out of the box, no FFmpeg or Termux needed for MKV files
 - **Smart caching** — translations cached for faster repeat playback
 - **Auto-fallback** — falls back to Lingva if API keys are missing
-- **25 UI languages** — fully translated via Transifex
+- **English and Swedish UI** — translations managed via Transifex
 
-**Latest changes (v0.9.17):**
+**Earlier extraction improvements (v0.9.17):**
 - Pure Python MKV subtitle extractor — no FFmpeg needed, streams over SMB/NFS
 - Fixed OOM crash on Android (streaming parser, never loads full file)
 - Fixed Lingva rate limiting (1.2s delay between requests)
@@ -50,3 +50,27 @@ Files:
 ## Author
 
 Daniel Nylander — [danielnylander.se](https://danielnylander.se)
+
+## Maintaining installable packages
+
+The repository declares `<hashes>md5</hashes>`. Kodi therefore requires a
+`<addon-id>/<addon-id>-<version>.zip.md5` sidecar for each ZIP when the server
+does not send a `Content-MD5` header. `addons.xml.md5` only covers the index;
+it does not replace the package checksums. A missing package checksum causes
+repository installation to fail even when manual ZIP installation succeeds.
+
+To prepare a release locally, download the published release ZIP, verify its
+GitHub release asset digest, then run:
+
+```sh
+python3 scripts/update_repository.py --package /path/to/release.zip
+python3 scripts/update_repository.py --check
+```
+
+Review and commit the ZIP, per-addon metadata, index and checksums together.
+The checker also runs in CI. Existing package versions cannot be replaced with
+different contents. ZIP files are intentional distribution artifacts here.
+
+After a repository update is published, use **Check for updates** in Kodi's
+add-on manager and retry installation. This repository now indexes the reviewed
+Subtitle Translator 0.11.3 package; future code changes require a new addon release.
