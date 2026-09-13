@@ -1,0 +1,4 @@
+Source: https://github.com/yeager/kodi-subtitle-translator
+Commit: 6e0fb6fb0000465d6de489a4b9a946efea9777e5
+Builder: python3 scripts/build_addon.py
+SHA-256: 548e89a79f5f7dee10d0c93f5d4168da9d8660d609bb82d10f147e7027d9bc21
